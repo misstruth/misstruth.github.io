@@ -1,0 +1,18 @@
+// 导入主题的所有样式
+@import "themes/hugo-theme-ladder/assets/scss/common/variables";
+@import "themes/hugo-theme-ladder/assets/scss/common/global";
+@import "themes/hugo-theme-ladder/assets/scss/common/dark";
+@import "themes/hugo-theme-ladder/assets/scss/common/dark_ice";
+@import "themes/hugo-theme-ladder/assets/scss/home";
+@import "themes/hugo-theme-ladder/assets/scss/header";
+@import "themes/hugo-theme-ladder/assets/scss/blog";
+@import "themes/hugo-theme-ladder/assets/scss/footer";
+@import "themes/hugo-theme-ladder/assets/scss/tags";
+@import "themes/hugo-theme-ladder/assets/scss/archives";
+@import "themes/hugo-theme-ladder/assets/scss/guestbook";
+@import "themes/hugo-theme-ladder/assets/scss/shortcodes";
+@import "themes/hugo-theme-ladder/assets/scss/card";
+@import "themes/hugo-theme-ladder/assets/scss/sponsors";
+
+// 导入我们的自定义样式
+@import "custom";

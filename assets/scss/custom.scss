@@ -1,0 +1,142 @@
+/* 自定义导航栏头像样式 */
+.navigation-avatar {
+  padding-top: 0.2rem;
+
+  a {
+    padding-left: 1rem;
+    padding-right: 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .nav-avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      border-color: #007acc;
+      transform: scale(1.05);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+
+    .nav-avatar {
+      width: 2.8rem;
+      height: 2.8rem;
+      margin: 0.6rem 0;
+    }
+  }
+}
+
+/* 确保头像在导航栏中正确对齐 */
+.navigation .navigation-list .navigation-avatar {
+  float: left;
+  margin: 0;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    float: none !important;
+  }
+}
+
+/* 首页文章列表样式 */
+.home-blog-section {
+  margin-top: 4rem;
+  padding: 0 2rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: var(--alt-fg-color, #333);
+    border-bottom: 2px solid var(--link-color, #007acc);
+    padding-bottom: 0.5rem;
+  }
+
+  .blog-list {
+    margin-bottom: 2rem;
+
+    article {
+      margin-bottom: 2rem;
+
+      .blog-card {
+        padding: 1.5rem;
+        border: 1px solid var(--gray-200, #e5e5e5);
+        border-radius: 8px;
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transform: translateY(-2px);
+        }
+
+        h3 {
+          margin: 0 0 1rem 0;
+
+          a {
+            color: var(--alt-fg-color, #333);
+            text-decoration: none;
+            font-size: 1.8rem;
+
+            &:hover {
+              color: var(--link-color, #007acc);
+            }
+          }
+        }
+
+        .blog-summary {
+          margin-top: 1rem;
+          color: var(--fg-color, #666);
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .view-all-posts {
+    text-align: center;
+    margin-top: 2rem;
+
+    .view-all-link {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: var(--link-color, #007acc);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--link-hover-color, #005a9e);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 1rem;
+    margin-top: 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .blog-list article .blog-card {
+      padding: 1rem;
+
+      h3 a {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

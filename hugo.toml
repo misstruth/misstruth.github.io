@@ -1,0 +1,57 @@
+baseURL = 'https://misstruth.github.io/'
+languageCode = 'zh'
+title = 'PiDan的个人博客'
+theme = 'hugo-theme-ladder'
+defaultContentLanguage = "zh"
+description = '一个专注于技术分享和生活记录的个人博客'
+
+[pagination]
+pagerSize = 10
+
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "文章"
+url = "/blog/"
+weight = 2
+
+[[menu.main]]
+name = "标签"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 4
+
+[[menu.main]]
+name = "关于"
+url = "/about/"
+weight = 5
+
+[[menu.main]]
+name = "联系"
+url = "/contact/"
+weight = 6
+
+[[menu.main]]
+name = "网站统计"
+url = "/xx/"
+weight = 7
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+brand = "主页"
+author = "PiDan"
+authorDescription = "阅读｜思考｜产出｜进步"
+info = "从未停止对未知的探索，尝试分享一些有趣的东西"
+avatarURL = "/images/WechatIMG323.jpg"  # 头像路径，以斜杠开头
+darkModeTheme = "data-dark-mode"
+favicon = "/images/WechatIMG323.jpg"  # 网站图标路径，以斜杠开头

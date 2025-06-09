@@ -1,0 +1,28 @@
+{{ define "content" }}
+    {{ partial "home/profile.html" . }}
+
+    <!-- 添加最新文章列表 -->
+    <div class="home-blog-section">
+        <h2>最新文章</h2>
+        <div class="blog-list">
+            {{ $posts := where .Site.RegularPages "Section" "blog" }}
+            {{ $posts = $posts | first 5 }}
+            {{ range $posts }}
+            <article>
+                <div class="blog-card">
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    {{ partial "blog/meta.html" . }}
+                    <div class="blog-summary">{{ .Summary }}</div>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        {{ $allPosts := where .Site.RegularPages "Section" "blog" }}
+        {{ if gt (len $allPosts) 5 }}
+        <div class="view-all-posts">
+            <a href="/blog/" class="view-all-link">查看所有文章 →</a>
+        </div>
+        {{ end }}
+    </div>
+{{ end }}
