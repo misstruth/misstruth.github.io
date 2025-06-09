@@ -26,5 +26,5 @@ echo "📤 推送到 GitHub..."
 git push
 
 echo "✅ 部署完成！"
-echo "🌐 您的网站将在几分钟后更新: https://misstruth.github.io"
+echo "🌐 您的网站将在几分钟后更新: https://unpidan.top"
 echo "📊 查看部署状态: https://github.com/misstruth/misstruth.github.io/actions"

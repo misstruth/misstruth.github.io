@@ -38,49 +38,58 @@ git push -u origin main
 ### 第五步：访问您的网站
 
 部署完成后，您的博客将在以下地址可用：
-- **GitHub Pages 地址**: https://misstruth.github.io
+- **自定义域名**: https://unpidan.top
+- **GitHub Pages 地址**: https://misstruth.github.io (备用)
 
-## 🌐 自定义域名设置
+## 🌐 域名 DNS 配置
 
-### 购买域名后的配置步骤：
+### unpidan.top 域名配置步骤：
 
-1. **更新 Hugo 配置**
+1. **Hugo 配置已更新**
    ```toml
-   # 在 hugo.toml 中更新 baseURL
-   baseURL = 'https://yourdomain.com/'
+   # hugo.toml 中的配置
+   baseURL = 'https://unpidan.top/'
    ```
 
-2. **添加 CNAME 文件**
+2. **CNAME 文件已创建**
    ```bash
-   # 在 static 目录下创建 CNAME 文件
-   echo "yourdomain.com" > static/CNAME
+   # static/CNAME 文件内容
+   unpidan.top
    ```
 
 3. **配置 DNS 记录**
-   
-   在您的域名提供商处添加以下 DNS 记录：
-   
-   **方法一：使用 A 记录（推荐）**
-   ```
+
+   在您的域名提供商（购买 unpidan.top 的地方）添加以下 DNS 记录：
+
+   **推荐配置：使用 A 记录**
+   ```dns
    类型: A
    名称: @
    值: 185.199.108.153
-   
+
    类型: A
    名称: @
    值: 185.199.109.153
-   
+
    类型: A
    名称: @
    值: 185.199.110.153
-   
+
    类型: A
    名称: @
    值: 185.199.111.153
+
+   类型: CNAME
+   名称: www
+   值: unpidan.top
    ```
-   
-   **方法二：使用 CNAME 记录**
-   ```
+
+   **备用配置：使用 CNAME 记录**
+   ```dns
+   类型: CNAME
+   名称: @
+   值: misstruth.github.io
+
    类型: CNAME
    名称: www
    值: misstruth.github.io
