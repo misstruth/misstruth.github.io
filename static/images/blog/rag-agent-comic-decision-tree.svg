@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：先上 RAG 还是先上 Agent</title>
+  <desc id="desc">一个三岔路口的决策图，问题主要是问答时偏向 RAG，主要是做事时偏向 Agent，同时需要查资料和行动时走 RAG 加 Agent。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .paper { fill: #fffdf8; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .ink { fill: #231d18; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 52px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 82)">
+    <rect x="404" y="26" width="592" height="108" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">先问一句：你到底是在问，还是在让系统做事？</text>
+  </g>
+
+  <g transform="translate(522 180)">
+    <path d="M0 0h280c22 0 34 12 34 34v30c0 22-12 34-34 34h-96l-30 34-4-34H0c-22 0-34-12-34-34V34C-34 12-22 0 0 0z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="140" y="54" text-anchor="middle" class="sub">这个需求最核心的目标是什么？</text>
+    <text x="140" y="86" text-anchor="middle" class="body">回答问题，还是把事情做完</text>
+  </g>
+
+  <path d="M700 312v92" class="stroke"/>
+  <path d="M700 404c-70 10-146 46-236 112" class="stroke"/>
+  <path d="M700 404c0 26 0 54 0 106" class="stroke"/>
+  <path d="M700 404c70 10 146 46 236 112" class="stroke"/>
+
+  <rect x="116" y="520" width="320" height="220" rx="24" class="panel blue"/>
+  <text x="148" y="586" class="sub">偏 RAG</text>
+  <text x="148" y="628" class="hand">用户主要是在问</text>
+  <path d="M148 666h150M148 690h124" class="soft"/>
+  <text x="148" y="728" class="body">更关心答得准不准，</text>
+  <text x="148" y="758" class="body">而不是系统会不会自己行动。</text>
+
+  <rect x="540" y="500" width="320" height="240" rx="24" class="panel yellow"/>
+  <text x="572" y="566" class="sub">RAG + Agent</text>
+  <text x="572" y="608" class="hand">先查资料，再去行动</text>
+  <path d="M572 646h174M572 670h136" class="soft"/>
+  <text x="572" y="708" class="body">需要证据，也需要执行，</text>
+  <text x="572" y="738" class="body">这是最常见的现实组合。</text>
+
+  <rect x="964" y="520" width="320" height="220" rx="24" class="panel mint"/>
+  <text x="996" y="586" class="sub">偏 Agent</text>
+  <text x="996" y="628" class="hand">用户主要是在让系统做事</text>
+  <path d="M996 666h166M996 690h132" class="soft"/>
+  <text x="996" y="728" class="body">重点是工具、步骤、状态，</text>
+  <text x="996" y="758" class="body">不是有没有外部知识库。</text>
+</svg>

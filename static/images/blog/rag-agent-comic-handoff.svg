@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：RAG 和 Agent 的协作</title>
+  <desc id="desc">三格漫画：用户先提出问题，检索系统从文档和日志中拉回当前上下文，然后 Agent 使用工具继续行动。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .double { fill: none; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; opacity: 0.45; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .white { fill: #fffdf8; }
+    .ink { fill: #231d18; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 54px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .tag { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+    .sub { font: 700 30px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+  </style>
+
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.7">
+    <circle class="dots" cx="74" cy="76" r="3"/><circle class="dots" cx="138" cy="76" r="3"/><circle class="dots" cx="202" cy="76" r="3"/><circle class="dots" cx="266" cy="76" r="3"/><circle class="dots" cx="330" cy="76" r="3"/><circle class="dots" cx="394" cy="76" r="3"/><circle class="dots" cx="458" cy="76" r="3"/><circle class="dots" cx="522" cy="76" r="3"/><circle class="dots" cx="586" cy="76" r="3"/><circle class="dots" cx="650" cy="76" r="3"/><circle class="dots" cx="714" cy="76" r="3"/><circle class="dots" cx="778" cy="76" r="3"/><circle class="dots" cx="842" cy="76" r="3"/><circle class="dots" cx="906" cy="76" r="3"/><circle class="dots" cx="970" cy="76" r="3"/><circle class="dots" cx="1034" cy="76" r="3"/><circle class="dots" cx="1098" cy="76" r="3"/><circle class="dots" cx="1162" cy="76" r="3"/><circle class="dots" cx="1226" cy="76" r="3"/><circle class="dots" cx="1290" cy="76" r="3"/>
+    <circle class="dots" cx="104" cy="144" r="3"/><circle class="dots" cx="168" cy="144" r="3"/><circle class="dots" cx="232" cy="144" r="3"/><circle class="dots" cx="296" cy="144" r="3"/><circle class="dots" cx="360" cy="144" r="3"/><circle class="dots" cx="424" cy="144" r="3"/><circle class="dots" cx="488" cy="144" r="3"/><circle class="dots" cx="552" cy="144" r="3"/><circle class="dots" cx="616" cy="144" r="3"/><circle class="dots" cx="680" cy="144" r="3"/><circle class="dots" cx="744" cy="144" r="3"/><circle class="dots" cx="808" cy="144" r="3"/><circle class="dots" cx="872" cy="144" r="3"/><circle class="dots" cx="936" cy="144" r="3"/><circle class="dots" cx="1000" cy="144" r="3"/><circle class="dots" cx="1064" cy="144" r="3"/><circle class="dots" cx="1128" cy="144" r="3"/><circle class="dots" cx="1192" cy="144" r="3"/><circle class="dots" cx="1256" cy="144" r="3"/>
+  </g>
+
+  <g transform="rotate(-2 700 82)">
+    <rect x="462" y="28" width="480" height="102" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <rect x="486" y="12" width="106" height="26" rx="8" fill="#f8ecc0" opacity="0.9"/>
+    <text x="702" y="95" text-anchor="middle" class="title">先检索，再行动</text>
+  </g>
+
+  <g>
+    <rect x="58" y="184" width="390" height="582" rx="28" class="panel yellow"/>
+    <rect x="70" y="196" width="390" height="582" rx="28" class="double"/>
+    <text x="94" y="244" class="sub">01 / 用户先提问题</text>
+    <text x="94" y="288" class="tag">先知道到底要解决什么</text>
+    <path d="M114 344h206c24 0 34 14 34 34v34c0 20-12 34-34 34h-84l-30 34-4-34h-88c-22 0-34-14-34-34v-34c0-20 12-34 34-34z" class="white" stroke="#231d18" stroke-width="5"/>
+    <text x="216" y="402" text-anchor="middle" class="body">线上告警了怎么办？</text>
+    <g transform="translate(236 536)">
+      <circle cx="0" cy="-34" r="58" class="white" stroke="#231d18" stroke-width="5"/>
+      <circle cx="-16" cy="-40" r="5" class="ink"/>
+      <circle cx="16" cy="-40" r="5" class="ink"/>
+      <path d="M-18 -14c12 10 40 10 54 0" class="soft"/>
+      <path d="M0 24v78" class="stroke"/>
+      <path d="M0 56l-66 28" class="stroke"/>
+      <path d="M0 56l62 34" class="stroke"/>
+      <path d="M0 102l-42 64" class="stroke"/>
+      <path d="M0 102l40 64" class="stroke"/>
+    </g>
+    <path d="M112 670c80 16 160 16 240 0" class="soft" opacity="0.55"/>
+  </g>
+
+  <g>
+    <rect x="504" y="184" width="392" height="582" rx="28" class="panel blue"/>
+    <rect x="516" y="196" width="392" height="582" rx="28" class="double"/>
+    <text x="540" y="244" class="sub">02 / RAG 去拿上下文</text>
+    <text x="540" y="288" class="tag">不是直接回答，而是先备料</text>
+
+    <g transform="translate(560 374)">
+      <rect x="0" y="0" width="118" height="88" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <rect x="18" y="18" width="58" height="10" rx="5" class="yellow"/>
+      <path d="M18 46h76M18 66h84" class="soft"/>
+      <text x="60" y="116" text-anchor="middle" class="body">runbook</text>
+    </g>
+    <g transform="translate(706 330) rotate(-4 60 60)">
+      <rect x="0" y="0" width="118" height="88" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <rect x="18" y="18" width="52" height="10" rx="5" class="mint"/>
+      <path d="M18 46h80M18 66h72" class="soft"/>
+      <text x="60" y="116" text-anchor="middle" class="body">日志</text>
+    </g>
+    <g transform="translate(712 458) rotate(5 60 60)">
+      <rect x="0" y="0" width="118" height="88" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <rect x="18" y="18" width="64" height="10" rx="5" fill="#ffd7d0"/>
+      <path d="M18 46h82M18 66h70" class="soft"/>
+      <text x="60" y="116" text-anchor="middle" class="body">文档</text>
+    </g>
+
+    <path d="M666 566c18-46 52-74 102-84" class="stroke"/>
+    <path d="M732 560c18-44 36-68 72-88" class="stroke"/>
+    <path d="M790 548c6-36 18-64 36-88" class="stroke"/>
+
+    <g transform="translate(572 592) rotate(-2 128 72)">
+      <rect x="0" y="0" width="256" height="144" rx="20" class="yellow" stroke="#231d18" stroke-width="5"/>
+      <text x="30" y="46" class="body">当前上下文</text>
+      <path d="M30 72h196M30 98h172M30 124h188" class="soft"/>
+    </g>
+  </g>
+
+  <g>
+    <rect x="952" y="184" width="390" height="582" rx="28" class="panel mint"/>
+    <rect x="964" y="196" width="390" height="582" rx="28" class="double"/>
+    <text x="988" y="244" class="sub">03 / Agent 再去行动</text>
+    <text x="988" y="288" class="tag">拿着上下文，决定下一步</text>
+
+    <g transform="translate(1142 472)">
+      <circle cx="0" cy="-26" r="58" class="white" stroke="#231d18" stroke-width="5"/>
+      <circle cx="-16" cy="-32" r="5" class="ink"/>
+      <circle cx="16" cy="-32" r="5" class="ink"/>
+      <path d="M-20 -8c12 8 42 8 56 0" class="soft"/>
+      <path d="M0 32v82" class="stroke"/>
+      <path d="M0 62l-64 24" class="stroke"/>
+      <path d="M0 62l66 30" class="stroke"/>
+      <path d="M0 114l-42 62" class="stroke"/>
+      <path d="M0 114l42 62" class="stroke"/>
+    </g>
+
+    <g transform="translate(1012 362)">
+      <rect x="0" y="0" width="118" height="70" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <text x="60" y="44" text-anchor="middle" class="body">查日志</text>
+    </g>
+    <g transform="translate(1168 334) rotate(-4 59 35)">
+      <rect x="0" y="0" width="118" height="70" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <text x="60" y="44" text-anchor="middle" class="body">搜代码</text>
+    </g>
+    <g transform="translate(1176 448) rotate(5 59 35)">
+      <rect x="0" y="0" width="118" height="70" rx="16" class="white" stroke="#231d18" stroke-width="5"/>
+      <text x="60" y="44" text-anchor="middle" class="body">发消息</text>
+    </g>
+
+    <path d="M1070 446c18 18 30 24 54 28" class="stroke"/>
+    <path d="M1216 412c-16 18-30 26-54 34" class="stroke"/>
+    <path d="M1218 494c-12-4-28-8-54-16" class="stroke"/>
+  </g>
+</svg>

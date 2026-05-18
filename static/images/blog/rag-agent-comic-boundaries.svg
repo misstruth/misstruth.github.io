@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：会话历史、记忆与 RAG 的边界</title>
+  <desc id="desc">三张手写便签分别表示会话历史、长期记忆和 RAG 外部资料，每张卡片的职责不同，不应该混在一起。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .note { stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .paper { fill: #fff9f1; }
+    .blue { fill: #dcecff; }
+    .peach { fill: #f7ddd4; }
+    .yellow { fill: #fff0b4; }
+    .white { fill: #fffdf8; }
+    .ink { fill: #231d18; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 54px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+  </style>
+
+  <rect class="bg" width="1400" height="900"/>
+  <g opacity="0.65">
+    <circle class="dots" cx="80" cy="80" r="3"/><circle class="dots" cx="144" cy="80" r="3"/><circle class="dots" cx="208" cy="80" r="3"/><circle class="dots" cx="272" cy="80" r="3"/><circle class="dots" cx="336" cy="80" r="3"/><circle class="dots" cx="400" cy="80" r="3"/><circle class="dots" cx="464" cy="80" r="3"/><circle class="dots" cx="528" cy="80" r="3"/><circle class="dots" cx="592" cy="80" r="3"/><circle class="dots" cx="656" cy="80" r="3"/><circle class="dots" cx="720" cy="80" r="3"/><circle class="dots" cx="784" cy="80" r="3"/><circle class="dots" cx="848" cy="80" r="3"/><circle class="dots" cx="912" cy="80" r="3"/><circle class="dots" cx="976" cy="80" r="3"/><circle class="dots" cx="1040" cy="80" r="3"/><circle class="dots" cx="1104" cy="80" r="3"/><circle class="dots" cx="1168" cy="80" r="3"/><circle class="dots" cx="1232" cy="80" r="3"/><circle class="dots" cx="1296" cy="80" r="3"/>
+    <circle class="dots" cx="110" cy="146" r="3"/><circle class="dots" cx="174" cy="146" r="3"/><circle class="dots" cx="238" cy="146" r="3"/><circle class="dots" cx="302" cy="146" r="3"/><circle class="dots" cx="366" cy="146" r="3"/><circle class="dots" cx="430" cy="146" r="3"/><circle class="dots" cx="494" cy="146" r="3"/><circle class="dots" cx="558" cy="146" r="3"/><circle class="dots" cx="622" cy="146" r="3"/><circle class="dots" cx="686" cy="146" r="3"/><circle class="dots" cx="750" cy="146" r="3"/><circle class="dots" cx="814" cy="146" r="3"/><circle class="dots" cx="878" cy="146" r="3"/><circle class="dots" cx="942" cy="146" r="3"/><circle class="dots" cx="1006" cy="146" r="3"/><circle class="dots" cx="1070" cy="146" r="3"/><circle class="dots" cx="1134" cy="146" r="3"/><circle class="dots" cx="1198" cy="146" r="3"/><circle class="dots" cx="1262" cy="146" r="3"/>
+  </g>
+
+  <g transform="rotate(-2 700 84)">
+    <rect x="390" y="26" width="622" height="108" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <rect x="422" y="10" width="114" height="28" rx="8" fill="#f8ecc0" opacity="0.9"/>
+    <text x="702" y="96" text-anchor="middle" class="title">这三个东西，最好别混着装</text>
+  </g>
+
+  <g transform="translate(82 208) rotate(-3 192 254)">
+    <rect x="0" y="0" width="384" height="520" rx="24" class="note blue"/>
+    <rect x="26" y="-18" width="110" height="30" rx="8" fill="#f8ecc0" opacity="0.9"/>
+    <text x="36" y="56" class="sub">会话历史</text>
+    <text x="36" y="96" class="hand">记录刚刚发生了什么</text>
+    <g transform="translate(190 182)">
+      <path d="M-106 -34h156c20 0 30 10 30 28v18c0 18-10 28-30 28h-44l-24 24-4-24h-84c-18 0-30-10-30-28V-6c0-18 12-28 30-28z" class="white" stroke="#231d18" stroke-width="5"/>
+      <path d="M-86 -10h96M-86 12h72" class="soft"/>
+      <path d="M-30 72h156c20 0 30 10 30 28v18c0 18-10 28-30 28H88l-22 22-4-22H-30c-18 0-30-10-30-28v-18c0-18 12-28 30-28z" class="white" stroke="#231d18" stroke-width="5"/>
+      <path d="M-8 96h96M-8 118h70" class="soft"/>
+    </g>
+    <path d="M42 330h300" class="soft" opacity="0.55"/>
+    <text x="42" y="388" class="body">- 用户刚刚问了什么</text>
+    <text x="42" y="430" class="body">- 模型上一轮回答了什么</text>
+    <text x="42" y="472" class="body">- 当前任务中间走到哪一步</text>
+  </g>
+
+  <g transform="translate(518 190) rotate(2 192 272)">
+    <rect x="0" y="0" width="384" height="556" rx="24" class="note peach"/>
+    <rect x="24" y="-18" width="110" height="30" rx="8" fill="#f8ecc0" opacity="0.9"/>
+    <text x="36" y="56" class="sub">记忆</text>
+    <text x="36" y="96" class="hand">记录长期稳定的偏好和背景</text>
+    <g transform="translate(190 188)">
+      <circle cx="0" cy="0" r="70" class="white" stroke="#231d18" stroke-width="5"/>
+      <path d="M-34 -14c12-12 30-18 34-18 4 0 22 6 34 18 14 14 16 40-4 60-10 10-24 20-30 26-6-6-20-16-30-26-20-20-18-46-4-60z" fill="#ffd0d0" stroke="#231d18" stroke-width="5"/>
+    </g>
+    <path d="M42 350h300" class="soft" opacity="0.55"/>
+    <text x="42" y="408" class="body">- 用户喜欢什么表达方式</text>
+    <text x="42" y="450" class="body">- 用户常做什么类型的任务</text>
+    <text x="42" y="492" class="body">- 哪些长期信息下次还值得记得</text>
+  </g>
+
+  <g transform="translate(956 214) rotate(-2 176 246)">
+    <rect x="0" y="0" width="356" height="500" rx="24" class="note paper"/>
+    <rect x="24" y="-18" width="110" height="30" rx="8" fill="#f8ecc0" opacity="0.9"/>
+    <text x="36" y="56" class="sub">RAG</text>
+    <text x="36" y="96" class="hand">拉当前问题需要的外部证据</text>
+    <g transform="translate(176 190)">
+      <rect x="-110" y="-74" width="220" height="148" rx="18" class="white" stroke="#231d18" stroke-width="5"/>
+      <rect x="-92" y="-50" width="88" height="12" rx="6" fill="#dcecff"/>
+      <path d="M-92 -18h146M-92 8h124M-92 34h156" class="soft"/>
+      <path d="M58 54l44 46" class="stroke"/>
+      <circle cx="28" cy="24" r="40" class="white" stroke="#231d18" stroke-width="5"/>
+    </g>
+    <path d="M34 338h286" class="soft" opacity="0.55"/>
+    <text x="34" y="396" class="body">- 这一题要查哪份文档</text>
+    <text x="34" y="438" class="body">- 哪些证据此刻最 relevant</text>
+    <text x="34" y="480" class="body">- 这次用完，不一定长期保存</text>
+  </g>
+</svg>

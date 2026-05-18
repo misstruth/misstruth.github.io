@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：不同语料类型的 RAG 变体</title>
+  <desc id="desc">三张大卡片分别代表知识库文档、代码技术支持和合规法务材料，各自强调不同的检索重点。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .paper { fill: #fffdf8; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 52px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 84)">
+    <rect x="382" y="26" width="636" height="106" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">同样叫 RAG，不同语料其实会长得不一样</text>
+  </g>
+
+  <rect x="72" y="194" width="392" height="590" rx="28" class="panel blue"/>
+  <text x="106" y="258" class="sub">文档 / 知识库</text>
+  <text x="106" y="300" class="hand">结构和上下文最值钱</text>
+  <g transform="translate(114 350)">
+    <rect x="0" y="0" width="290" height="178" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <rect x="22" y="22" width="116" height="16" rx="8" class="yellow"/>
+    <path d="M22 58h220M22 82h244M22 106h206" class="soft"/>
+    <rect x="22" y="124" width="244" height="34" rx="10" class="blue" stroke="#231d18" stroke-width="4"/>
+  </g>
+  <text x="112" y="584" class="body">默认更偏结构感知分块、</text>
+  <text x="112" y="616" class="body">hybrid、rerank 和 parent expansion。</text>
+
+  <rect x="504" y="194" width="392" height="590" rx="28" class="panel mint"/>
+  <text x="538" y="258" class="sub">代码 / 技术支持</text>
+  <text x="538" y="300" class="hand">标识符和错误码很重要</text>
+  <g transform="translate(548 348)">
+    <rect x="0" y="0" width="302" height="184" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <path d="M24 36h112M24 64h86M24 92h146M24 120h94" class="soft"/>
+    <rect x="176" y="28" width="98" height="110" rx="14" class="blue" stroke="#231d18" stroke-width="4"/>
+    <path d="M194 56h46M194 80h56M194 104h34" class="soft"/>
+  </g>
+  <text x="542" y="584" class="body">这里通常更依赖 BM25、</text>
+  <text x="542" y="616" class="body">混合检索和按函数接口切块。</text>
+
+  <rect x="936" y="194" width="392" height="590" rx="28" class="panel peach"/>
+  <text x="970" y="258" class="sub">法务 / 合规 / 政策</text>
+  <text x="970" y="300" class="hand">版本和生效时间最要命</text>
+  <g transform="translate(980 346)">
+    <rect x="0" y="0" width="302" height="188" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <rect x="24" y="22" width="118" height="16" rx="8" class="yellow"/>
+    <path d="M24 58h248M24 84h230M24 110h252M24 136h210" class="soft"/>
+    <rect x="184" y="22" width="88" height="34" rx="10" class="mint" stroke="#231d18" stroke-width="4"/>
+    <text x="228" y="46" text-anchor="middle" class="body">V2</text>
+  </g>
+  <text x="970" y="584" class="body">要把 metadata filter 放得更前，</text>
+  <text x="970" y="616" class="body">否则最怕引用错版本。</text>
+</svg>

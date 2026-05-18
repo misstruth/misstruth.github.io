@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：分块策略对比</title>
+  <desc id="desc">三格漫画对比分块方式：机械切块把句子切断，结构感知分块沿标题和段落切，父子分块先取小块再带回大上下文。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .paper { fill: #fffdf8; }
+    .ink { fill: #231d18; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 54px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 82)">
+    <rect x="442" y="26" width="516" height="106" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">不是切得整齐，而是切得有意义</text>
+  </g>
+  <rect x="60" y="188" width="390" height="584" rx="28" class="panel yellow"/>
+  <rect x="504" y="188" width="392" height="584" rx="28" class="panel blue"/>
+  <rect x="950" y="188" width="390" height="584" rx="28" class="panel mint"/>
+
+  <text x="94" y="248" class="sub">01 / 固定切块</text>
+  <text x="94" y="290" class="hand">简单，但容易把意思切断</text>
+  <g transform="translate(102 340)">
+    <rect x="0" y="0" width="288" height="188" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <rect x="20" y="22" width="88" height="12" rx="6" class="blue"/>
+    <path d="M20 56h220M20 82h234M20 108h206M20 134h240" class="soft"/>
+    <path d="M148 0v188" class="stroke"/>
+    <path d="M134 74l14 14 16-18M134 118l14 14 16-18" class="soft"/>
+  </g>
+  <text x="104" y="572" class="body">检索很容易只捞到半句话，</text>
+  <text x="104" y="606" class="body">或者把定义和限制条件拆开。</text>
+
+  <text x="540" y="248" class="sub">02 / 结构感知分块</text>
+  <text x="540" y="290" class="hand">沿标题、列表、代码块来切</text>
+  <g transform="translate(556 330)">
+    <rect x="0" y="0" width="282" height="212" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <rect x="20" y="18" width="114" height="18" rx="8" class="yellow"/>
+    <path d="M20 58h212M20 84h246" class="soft"/>
+    <rect x="20" y="106" width="242" height="72" rx="14" class="mint" stroke="#231d18" stroke-width="4"/>
+    <path d="M38 128h116M38 148h148M38 168h100" class="soft"/>
+    <path d="M136 42v36M136 78h92" class="stroke"/>
+  </g>
+  <text x="548" y="590" class="body">块更像完整证据，</text>
+  <text x="548" y="624" class="body">标题和上下文也更容易保住。</text>
+
+  <text x="988" y="248" class="sub">03 / 父子分块</text>
+  <text x="988" y="290" class="hand">先用小块命中，再带回大段</text>
+  <g transform="translate(990 328)">
+    <rect x="0" y="0" width="308" height="228" rx="18" class="paper" stroke="#231d18" stroke-width="5"/>
+    <rect x="20" y="20" width="268" height="162" rx="16" class="yellow" stroke="#231d18" stroke-width="4"/>
+    <rect x="48" y="56" width="84" height="48" rx="12" class="blue" stroke="#231d18" stroke-width="4"/>
+    <rect x="150" y="56" width="84" height="48" rx="12" class="mint" stroke="#231d18" stroke-width="4"/>
+    <rect x="92" y="116" width="84" height="48" rx="12" class="paper" stroke="#231d18" stroke-width="4"/>
+    <path d="M90 204h140" class="stroke"/>
+    <path d="M160 164v40" class="stroke"/>
+  </g>
+  <text x="994" y="590" class="body">既能精确命中，</text>
+  <text x="994" y="624" class="body">又不会只剩一个碎片句子。</text>
+</svg>

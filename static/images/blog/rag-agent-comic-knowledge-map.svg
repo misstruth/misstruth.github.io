@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风总览大图：RAG 与 Agent 实战知识点地图</title>
+  <desc id="desc">整篇文章的总览板，从问题判断、边界、数据库、分块、召回、默认组合、落地顺序到常见误区，全部围绕中央主题排列。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .paper { fill: #fffdf8; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 56px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 30px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1600" height="1180"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/><circle class="dots" cx="1358" cy="78" r="3"/><circle class="dots" cx="1422" cy="78" r="3"/><circle class="dots" cx="1486" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 800 92)">
+    <rect x="400" y="28" width="800" height="118" rx="20" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="800" y="106" text-anchor="middle" class="title">如果把整篇压成一张图，大概就是这张总览板</text>
+  </g>
+
+  <g transform="translate(542 396)">
+    <rect x="0" y="0" width="516" height="252" rx="32" class="panel"/>
+    <text x="258" y="88" text-anchor="middle" class="sub">中轴线</text>
+    <text x="258" y="140" text-anchor="middle" class="hand">RAG 找信息，Agent 做动作</text>
+    <text x="258" y="186" text-anchor="middle" class="body">两者不是一回事，但最常见的真实形态</text>
+    <text x="258" y="218" text-anchor="middle" class="body">是先检索，再交接，再行动</text>
+  </g>
+
+  <path d="M542 466c-94-70-176-104-310-134" class="stroke"/>
+  <path d="M1058 466c94-70 176-104 310-134" class="stroke"/>
+  <path d="M542 592c-104 54-184 96-314 156" class="stroke"/>
+  <path d="M1058 592c104 54 184 96 314 156" class="stroke"/>
+  <path d="M800 396c0-90 0-130 0-196" class="stroke"/>
+  <path d="M800 648c0 88 0 126 0 192" class="stroke"/>
+
+  <rect x="80" y="180" width="314" height="208" rx="24" class="panel blue"/>
+  <text x="114" y="246" class="sub">1. 先判断问题类型</text>
+  <text x="114" y="288" class="hand">是在问，还是在让系统做事</text>
+  <text x="114" y="332" class="body">偏问答就先看 RAG，</text>
+  <text x="114" y="364" class="body">偏执行就先看 Agent，</text>
+  <text x="114" y="396" class="body">需要两者就做干净交接。</text>
+
+  <rect x="1206" y="180" width="314" height="208" rx="24" class="panel mint"/>
+  <text x="1240" y="246" class="sub">2. 先把边界分清</text>
+  <text x="1240" y="288" class="hand">历史、记忆、RAG 别混装</text>
+  <text x="1240" y="332" class="body">会话历史存刚刚发生的事，</text>
+  <text x="1240" y="364" class="body">记忆存长期偏好，</text>
+  <text x="1240" y="396" class="body">RAG 拉当前题目的外部证据。</text>
+
+  <rect x="72" y="736" width="340" height="222" rx="24" class="panel peach"/>
+  <text x="106" y="804" class="sub">3. 数据库不是核心变量</text>
+  <text x="106" y="846" class="hand">先问自己缺原型、生产还是省运维</text>
+  <text x="106" y="892" class="body">Chroma、Qdrant、Weaviate、</text>
+  <text x="106" y="924" class="body">Milvus、Pinecone 各有地盘，</text>
+  <text x="106" y="956" class="body">FAISS 更像工具箱。</text>
+
+  <rect x="1188" y="736" width="340" height="222" rx="24" class="panel yellow"/>
+  <text x="1222" y="804" class="sub">4. 真正决定效果的是检索设计</text>
+  <text x="1222" y="846" class="hand">chunk、filter、hybrid、rerank</text>
+  <text x="1222" y="892" class="body">数据库决定长得顺不顺，</text>
+  <text x="1222" y="924" class="body">检索设计决定答得准不准。</text>
+
+  <rect x="612" y="164" width="376" height="168" rx="24" class="panel paper"/>
+  <text x="648" y="228" class="sub">5. 默认强解</text>
+  <text x="648" y="270" class="hand">结构感知分块 + metadata</text>
+  <text x="648" y="302" class="hand">hybrid + rerank + parent expansion</text>
+
+  <rect x="612" y="846" width="376" height="202" rx="24" class="panel blue"/>
+  <text x="648" y="910" class="sub">6. 更稳的落地顺序</text>
+  <text x="648" y="952" class="hand">先做检索，再整理上下文</text>
+  <text x="648" y="984" class="hand">再给工具，最后上自动化</text>
+  <text x="648" y="1022" class="body">别一上来就做全能 Agent。</text>
+
+  <g transform="translate(456 704)">
+    <path d="M0 0h226c20 0 32 12 32 32v18c0 20-12 32-32 32H104l-24 24-4-24H0c-20 0-32-12-32-32V32C-32 12-20 0 0 0z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="112" y="34" text-anchor="middle" class="body">最常见误区</text>
+    <text x="112" y="62" text-anchor="middle" class="body">1) 用 Agent 解纯搜索</text>
+    <text x="112" y="90" text-anchor="middle" class="body">2) 只有向量，没有混合检索</text>
+  </g>
+
+  <g transform="translate(914 704)">
+    <path d="M0 0h250c20 0 32 12 32 32v18c0 20-12 32-32 32H114l-24 24-4-24H0c-20 0-32-12-32-32V32C-32 12-20 0 0 0z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="125" y="34" text-anchor="middle" class="body">继续往下会踩的坑</text>
+    <text x="125" y="62" text-anchor="middle" class="body">3) 没有 rerank 就塞 top-k</text>
+    <text x="125" y="90" text-anchor="middle" class="body">4) 没有评估集，只凭感觉调</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：RAG 到 Agent 的落地顺序</title>
+  <desc id="desc">四个连成一段楼梯的步骤，从先做检索，到整理上下文，再给最小工具集，最后才自动化和多 Agent。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .paper { fill: #fffdf8; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 52px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 84)">
+    <rect x="410" y="26" width="580" height="106" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">这四步更像在爬楼梯，不像一次性起飞</text>
+  </g>
+  <path d="M106 706h248v-98h248v-98h248v-98h326" class="panel" fill="none"/>
+
+  <g transform="translate(108 562)">
+    <rect x="0" y="0" width="246" height="144" rx="22" class="panel blue"/>
+    <text x="28" y="54" class="sub">第 1 步</text>
+    <text x="28" y="94" class="hand">先把检索做好</text>
+    <path d="M28 118h124" class="soft"/>
+  </g>
+  <g transform="translate(356 464)">
+    <rect x="0" y="0" width="246" height="144" rx="22" class="panel mint"/>
+    <text x="28" y="54" class="sub">第 2 步</text>
+    <text x="28" y="94" class="hand">把上下文整理干净</text>
+    <path d="M28 118h154" class="soft"/>
+  </g>
+  <g transform="translate(604 366)">
+    <rect x="0" y="0" width="246" height="144" rx="22" class="panel peach"/>
+    <text x="28" y="54" class="sub">第 3 步</text>
+    <text x="28" y="94" class="hand">只给最小工具集</text>
+    <path d="M28 118h142" class="soft"/>
+  </g>
+  <g transform="translate(852 268)">
+    <rect x="0" y="0" width="274" height="144" rx="22" class="panel yellow"/>
+    <text x="28" y="54" class="sub">第 4 步</text>
+    <text x="28" y="94" class="hand">最后才自动化和多 Agent</text>
+    <path d="M28 118h206" class="soft"/>
+  </g>
+  <g transform="translate(1160 248)">
+    <path d="M0 40h150c22 0 34 12 34 34v22c0 22-12 34-34 34H80l-24 24-4-24H0c-22 0-34-12-34-34V74C-34 52-22 40 0 40z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="74" y="92" text-anchor="middle" class="body">这样比一上来</text>
+    <text x="74" y="120" text-anchor="middle" class="body">做全能 Agent 稳</text>
+  </g>
+</svg>

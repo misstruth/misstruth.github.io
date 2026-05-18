@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：RAG 常见误区墙</title>
+  <desc id="desc">一面贴满便签的误区墙，列出用 Agent 做纯搜索、只做向量检索、没有 rerank、把记忆当事实库、没有评估集等常见问题。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .paper { fill: #fffdf8; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 52px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 23px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 26px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="900"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 86)">
+    <rect x="418" y="28" width="564" height="108" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="98" text-anchor="middle" class="title">这些坑看起来小，堆起来就会很烦</text>
+  </g>
+
+  <rect x="98" y="194" width="260" height="182" rx="20" class="blue" stroke="#231d18" stroke-width="5" transform="rotate(-4 228 285)"/>
+  <text x="132" y="258" class="sub">1. 用 Agent 解纯搜索</text>
+  <text x="132" y="300" class="hand">问题简单，链路却变长</text>
+  <path d="M132 334h164M132 358h122" class="soft"/>
+
+  <rect x="416" y="214" width="260" height="182" rx="20" class="mint" stroke="#231d18" stroke-width="5" transform="rotate(3 546 305)"/>
+  <text x="448" y="278" class="sub">2. 只做向量检索</text>
+  <text x="448" y="320" class="hand">精确词一来就发虚</text>
+  <path d="M448 354h154M448 378h116" class="soft"/>
+
+  <rect x="742" y="196" width="260" height="182" rx="20" class="peach" stroke="#231d18" stroke-width="5" transform="rotate(-2 872 287)"/>
+  <text x="774" y="260" class="sub">3. 没有 rerank</text>
+  <text x="774" y="302" class="hand">候选多了，前排却不对</text>
+  <path d="M774 336h152M774 360h126" class="soft"/>
+
+  <rect x="1066" y="214" width="260" height="182" rx="20" class="yellow" stroke="#231d18" stroke-width="5" transform="rotate(4 1196 305)"/>
+  <text x="1098" y="278" class="sub">4. 把记忆当事实库</text>
+  <text x="1098" y="320" class="hand">偏好不是权威证据</text>
+  <path d="M1098 354h154M1098 378h122" class="soft"/>
+
+  <rect x="270" y="492" width="320" height="214" rx="22" class="yellow" stroke="#231d18" stroke-width="5" transform="rotate(-3 430 599)"/>
+  <text x="306" y="562" class="sub">5. 没有评估集</text>
+  <text x="306" y="606" class="hand">出了问题也不知道是哪一层</text>
+  <path d="M306 642h188M306 668h148" class="soft"/>
+
+  <rect x="744" y="492" width="390" height="214" rx="22" class="paper" stroke="#231d18" stroke-width="6" transform="rotate(2 939 599)"/>
+  <text x="782" y="562" class="sub">更稳的反方向</text>
+  <text x="782" y="606" class="hand">混合检索 + rerank + 小评估集</text>
+  <path d="M782 642h236M782 668h194" class="soft"/>
+  <path d="M1128 530c34 22 60 52 70 92" class="stroke"/>
+  <path d="M1180 632l24-12-6 24" class="stroke"/>
+</svg>

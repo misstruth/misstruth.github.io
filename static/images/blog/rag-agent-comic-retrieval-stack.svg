@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：召回与重排</title>
+  <desc id="desc">关键词和向量两路召回汇入候选池，再由 rerank 挑出最值得进入上下文的结果。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .paper { fill: #fffdf8; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 54px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 82)">
+    <rect x="454" y="26" width="492" height="106" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">先把人找齐，再决定谁坐前排</text>
+  </g>
+
+  <rect x="84" y="200" width="268" height="208" rx="24" class="panel blue"/>
+  <text x="120" y="264" class="sub">关键词 / BM25</text>
+  <text x="120" y="308" class="hand">错误码、函数名、型号</text>
+  <path d="M120 348h148M120 372h112" class="soft"/>
+
+  <rect x="84" y="468" width="268" height="208" rx="24" class="panel mint"/>
+  <text x="120" y="532" class="sub">Dense / Sparse</text>
+  <text x="120" y="576" class="hand">同义表达、自然语言</text>
+  <path d="M120 616h156M120 640h120" class="soft"/>
+
+  <rect x="454" y="270" width="318" height="336" rx="26" class="panel paper"/>
+  <text x="492" y="332" class="sub">候选池</text>
+  <text x="492" y="374" class="hand">先别漏掉相关结果</text>
+  <rect x="506" y="414" width="214" height="44" rx="12" class="yellow" stroke="#231d18" stroke-width="4"/>
+  <rect x="530" y="472" width="164" height="44" rx="12" class="blue" stroke="#231d18" stroke-width="4"/>
+  <rect x="516" y="530" width="196" height="44" rx="12" class="mint" stroke="#231d18" stroke-width="4"/>
+  <path d="M352 304c44 0 74 14 102 42" class="stroke"/>
+  <path d="M352 572c44 0 74-18 102-54" class="stroke"/>
+
+  <rect x="876" y="242" width="436" height="392" rx="28" class="panel peach"/>
+  <text x="916" y="306" class="sub">Rerank</text>
+  <text x="916" y="348" class="hand">把真正该看的推到前面</text>
+  <g transform="translate(954 404)">
+    <rect x="0" y="106" width="86" height="86" rx="12" class="blue" stroke="#231d18" stroke-width="4"/>
+    <rect x="106" y="58" width="86" height="134" rx="12" class="yellow" stroke="#231d18" stroke-width="4"/>
+    <rect x="212" y="0" width="86" height="192" rx="12" class="mint" stroke="#231d18" stroke-width="4"/>
+    <text x="42" y="154" text-anchor="middle" class="body">候选</text>
+    <text x="148" y="128" text-anchor="middle" class="body">更相关</text>
+    <text x="254" y="96" text-anchor="middle" class="body">最该进</text>
+    <text x="254" y="128" text-anchor="middle" class="body">上下文</text>
+  </g>
+  <path d="M772 438c38 0 78-8 104-34" class="stroke"/>
+  <path d="M772 516c34 8 66 8 104-18" class="stroke"/>
+</svg>

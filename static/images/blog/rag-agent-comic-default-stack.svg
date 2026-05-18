@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：RAG 默认强解组合</title>
+  <desc id="desc">一条台阶式工作流，从结构化分块、元数据过滤、混合召回、重排，到父级上下文扩展和评估闭环。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .paper { fill: #fffdf8; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 52px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="860"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+  </g>
+  <g transform="rotate(-2 700 84)">
+    <rect x="398" y="26" width="604" height="106" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="700" y="96" text-anchor="middle" class="title">更稳的默认组合，像一段要爬的台阶</text>
+  </g>
+
+  <path d="M118 698h170v-70h164v-76h164v-84h164v-88h164v-92h172" class="panel" fill="none"/>
+
+  <g transform="translate(120 562)">
+    <rect x="0" y="0" width="168" height="136" rx="20" class="panel blue"/>
+    <text x="26" y="50" class="sub">1. 分块</text>
+    <text x="26" y="92" class="hand">结构感知优先</text>
+  </g>
+  <g transform="translate(286 486)">
+    <rect x="0" y="0" width="166" height="142" rx="20" class="panel mint"/>
+    <text x="24" y="52" class="sub">2. Metadata</text>
+    <text x="24" y="94" class="hand">先把范围收窄</text>
+  </g>
+  <g transform="translate(452 402)">
+    <rect x="0" y="0" width="164" height="150" rx="20" class="panel yellow"/>
+    <text x="24" y="56" class="sub">3. Hybrid</text>
+    <text x="24" y="98" class="hand">关键词 + 语义</text>
+  </g>
+  <g transform="translate(618 314)">
+    <rect x="0" y="0" width="164" height="154" rx="20" class="panel peach"/>
+    <text x="28" y="58" class="sub">4. Rerank</text>
+    <text x="28" y="100" class="hand">别让错的排前面</text>
+  </g>
+  <g transform="translate(784 222)">
+    <rect x="0" y="0" width="166" height="158" rx="20" class="panel blue"/>
+    <text x="20" y="54" class="sub">5. Parent</text>
+    <text x="20" y="96" class="hand">带回父级上下文</text>
+  </g>
+  <g transform="translate(950 126)">
+    <rect x="0" y="0" width="168" height="164" rx="20" class="panel mint"/>
+    <text x="28" y="58" class="sub">6. Eval</text>
+    <text x="28" y="100" class="hand">用真实问题回归</text>
+  </g>
+
+  <g transform="translate(1172 112)">
+    <path d="M0 116h146c20 0 32 12 32 32v18c0 20-12 32-32 32H74l-24 24-4-24H0c-20 0-32-12-32-32v-18c0-20 12-32 32-32z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="74" y="168" text-anchor="middle" class="body">这样做通常</text>
+    <text x="74" y="196" text-anchor="middle" class="body">不容易做歪</text>
+  </g>
+</svg>

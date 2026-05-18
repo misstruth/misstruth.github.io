@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 840" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风横向封面图：RAG 与 Agent 的分工与组合</title>
+  <desc id="desc">一张横向封面图，左侧是围着资料、检索和向量库的 RAG 角色，右侧是围着工具、自动化和执行清单的 Agent 角色，中间用一条交接路径连接。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .ink { fill: #231d18; }
+    .paper { fill: #fffdf8; }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .title { font: 700 60px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 32px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 26px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 30px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1600" height="840"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/><circle class="dots" cx="1358" cy="78" r="3"/><circle class="dots" cx="1422" cy="78" r="3"/><circle class="dots" cx="1486" cy="78" r="3"/>
+    <circle class="dots" cx="108" cy="144" r="3"/><circle class="dots" cx="172" cy="144" r="3"/><circle class="dots" cx="236" cy="144" r="3"/><circle class="dots" cx="300" cy="144" r="3"/><circle class="dots" cx="364" cy="144" r="3"/><circle class="dots" cx="428" cy="144" r="3"/><circle class="dots" cx="492" cy="144" r="3"/><circle class="dots" cx="556" cy="144" r="3"/><circle class="dots" cx="620" cy="144" r="3"/><circle class="dots" cx="684" cy="144" r="3"/><circle class="dots" cx="748" cy="144" r="3"/><circle class="dots" cx="812" cy="144" r="3"/><circle class="dots" cx="876" cy="144" r="3"/><circle class="dots" cx="940" cy="144" r="3"/><circle class="dots" cx="1004" cy="144" r="3"/><circle class="dots" cx="1068" cy="144" r="3"/><circle class="dots" cx="1132" cy="144" r="3"/><circle class="dots" cx="1196" cy="144" r="3"/><circle class="dots" cx="1260" cy="144" r="3"/><circle class="dots" cx="1324" cy="144" r="3"/><circle class="dots" cx="1388" cy="144" r="3"/><circle class="dots" cx="1452" cy="144" r="3"/>
+  </g>
+
+  <g transform="rotate(-2 800 92)">
+    <rect x="358" y="30" width="884" height="118" rx="20" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="800" y="108" text-anchor="middle" class="title">RAG 负责把信息找回来，Agent 负责把事情做下去</text>
+  </g>
+
+  <rect x="86" y="196" width="1428" height="556" rx="30" class="panel"/>
+
+  <rect x="124" y="244" width="470" height="430" rx="28" class="blue" stroke="#231d18" stroke-width="6"/>
+  <text x="164" y="316" class="sub">RAG</text>
+  <text x="164" y="360" class="hand">检索、切块、过滤、重排</text>
+  <rect x="168" y="404" width="170" height="104" rx="16" class="paper" stroke="#231d18" stroke-width="4"/>
+  <path d="M192 432h110M192 456h96M192 480h120" class="soft"/>
+  <rect x="362" y="404" width="170" height="104" rx="16" class="yellow" stroke="#231d18" stroke-width="4"/>
+  <text x="447" y="454" text-anchor="middle" class="body">vector</text>
+  <text x="447" y="488" text-anchor="middle" class="body">db</text>
+  <path d="M196 560h288M196 590h248M196 620h206" class="soft"/>
+  <text x="166" y="646" class="body">重点是找到对的证据，</text>
+  <text x="166" y="678" class="body">把上下文准备干净。</text>
+
+  <rect x="1006" y="244" width="470" height="430" rx="28" class="mint" stroke="#231d18" stroke-width="6"/>
+  <text x="1046" y="316" class="sub">Agent</text>
+  <text x="1046" y="360" class="hand">规划、工具、状态、执行</text>
+  <rect x="1054" y="404" width="178" height="108" rx="16" class="peach" stroke="#231d18" stroke-width="4"/>
+  <text x="1143" y="454" text-anchor="middle" class="body">tools</text>
+  <text x="1143" y="488" text-anchor="middle" class="body">actions</text>
+  <rect x="1260" y="404" width="174" height="108" rx="16" class="paper" stroke="#231d18" stroke-width="4"/>
+  <path d="M1284 432h98M1284 456h114M1284 480h80" class="soft"/>
+  <path d="M1066 560h290M1066 590h252M1066 620h214" class="soft"/>
+  <text x="1046" y="646" class="body">重点是把事情做完，</text>
+  <text x="1046" y="678" class="body">不只是把话说对。</text>
+
+  <g transform="translate(610 260)">
+    <path d="M0 26h270c22 0 34 12 34 34v30c0 22-12 34-34 34h-70l-26 30-4-30H0c-22 0-34-12-34-34V60C-34 38-22 26 0 26z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="136" y="80" text-anchor="middle" class="sub">中间最关键的是交接</text>
+    <text x="136" y="112" text-anchor="middle" class="body">把检索到的证据注入到当前任务</text>
+  </g>
+  <path d="M594 460c110-32 172-34 404 0" class="stroke"/>
+  <path d="M718 414l-8 18 28-2" class="stroke"/>
+  <path d="M854 502l18-14-2 28" class="stroke"/>
+
+  <g transform="translate(640 516)">
+    <rect x="0" y="0" width="316" height="126" rx="20" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <text x="158" y="52" text-anchor="middle" class="body">别把记忆、历史、RAG 和规则</text>
+    <text x="158" y="86" text-anchor="middle" class="body">全部糊成一个大 prompt</text>
+  </g>
+</svg>

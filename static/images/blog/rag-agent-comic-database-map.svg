@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 880" role="img" aria-labelledby="title desc">
+  <title id="title">漫画风插图：RAG 数据库选型地图</title>
+  <desc id="desc">一面贴满便签的选型墙，分别指向原型、生产、自托管、托管和大规模路线，旁边单独放着一个 FAISS 工具箱。</desc>
+  <style>
+    .bg { fill: #fbf7ef; }
+    .dots { fill: #eadfce; }
+    .ink { fill: #231d18; }
+    .stroke { fill: none; stroke: #231d18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    .soft { fill: none; stroke: #231d18; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    .panel { fill: #fff9f0; stroke: #231d18; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .tape { fill: rgba(248, 236, 192, 0.9); }
+    .yellow { fill: #fff0b4; }
+    .blue { fill: #dcecff; }
+    .mint { fill: #ddf0e4; }
+    .peach { fill: #f7ddd4; }
+    .paper { fill: #fffdf8; }
+    .title { font: 700 54px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .sub { font: 700 28px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .body { font: 500 24px "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; fill: #231d18; }
+    .hand { font: 700 28px "Kaiti SC", "STKaiti", serif; fill: #231d18; }
+  </style>
+  <rect class="bg" width="1400" height="880"/>
+  <g opacity="0.68">
+    <circle class="dots" cx="78" cy="78" r="3"/><circle class="dots" cx="142" cy="78" r="3"/><circle class="dots" cx="206" cy="78" r="3"/><circle class="dots" cx="270" cy="78" r="3"/><circle class="dots" cx="334" cy="78" r="3"/><circle class="dots" cx="398" cy="78" r="3"/><circle class="dots" cx="462" cy="78" r="3"/><circle class="dots" cx="526" cy="78" r="3"/><circle class="dots" cx="590" cy="78" r="3"/><circle class="dots" cx="654" cy="78" r="3"/><circle class="dots" cx="718" cy="78" r="3"/><circle class="dots" cx="782" cy="78" r="3"/><circle class="dots" cx="846" cy="78" r="3"/><circle class="dots" cx="910" cy="78" r="3"/><circle class="dots" cx="974" cy="78" r="3"/><circle class="dots" cx="1038" cy="78" r="3"/><circle class="dots" cx="1102" cy="78" r="3"/><circle class="dots" cx="1166" cy="78" r="3"/><circle class="dots" cx="1230" cy="78" r="3"/><circle class="dots" cx="1294" cy="78" r="3"/>
+    <circle class="dots" cx="108" cy="144" r="3"/><circle class="dots" cx="172" cy="144" r="3"/><circle class="dots" cx="236" cy="144" r="3"/><circle class="dots" cx="300" cy="144" r="3"/><circle class="dots" cx="364" cy="144" r="3"/><circle class="dots" cx="428" cy="144" r="3"/><circle class="dots" cx="492" cy="144" r="3"/><circle class="dots" cx="556" cy="144" r="3"/><circle class="dots" cx="620" cy="144" r="3"/><circle class="dots" cx="684" cy="144" r="3"/><circle class="dots" cx="748" cy="144" r="3"/><circle class="dots" cx="812" cy="144" r="3"/><circle class="dots" cx="876" cy="144" r="3"/><circle class="dots" cx="940" cy="144" r="3"/><circle class="dots" cx="1004" cy="144" r="3"/><circle class="dots" cx="1068" cy="144" r="3"/><circle class="dots" cx="1132" cy="144" r="3"/><circle class="dots" cx="1196" cy="144" r="3"/><circle class="dots" cx="1260" cy="144" r="3"/>
+  </g>
+
+  <g transform="rotate(-2 700 86)">
+    <rect x="406" y="26" width="592" height="108" rx="18" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <rect x="438" y="10" width="112" height="28" rx="8" class="tape"/>
+    <text x="702" y="96" text-anchor="middle" class="title">先看你缺什么，不是先问谁最强</text>
+  </g>
+
+  <rect x="74" y="176" width="1252" height="640" rx="28" class="panel"/>
+  <rect x="96" y="200" width="240" height="176" rx="20" class="blue" stroke="#231d18" stroke-width="5" transform="rotate(-3 216 288)"/>
+  <rect x="122" y="184" width="92" height="28" rx="8" class="tape" transform="rotate(-6 168 198)"/>
+  <text x="146" y="262" class="sub">Chroma</text>
+  <text x="146" y="304" class="hand">原型快，先跑起来</text>
+  <path d="M146 334h124M146 356h96" class="soft"/>
+
+  <rect x="390" y="220" width="254" height="188" rx="20" class="mint" stroke="#231d18" stroke-width="5" transform="rotate(2 517 314)"/>
+  <rect x="424" y="198" width="92" height="28" rx="8" class="tape" transform="rotate(4 470 212)"/>
+  <text x="436" y="302" class="sub">Qdrant</text>
+  <text x="436" y="344" class="hand">原型能长大，生产也顺</text>
+  <path d="M436 374h146M436 396h110" class="soft"/>
+
+  <rect x="714" y="208" width="254" height="188" rx="20" class="peach" stroke="#231d18" stroke-width="5" transform="rotate(-2 841 302)"/>
+  <rect x="742" y="192" width="92" height="28" rx="8" class="tape" transform="rotate(-4 788 206)"/>
+  <text x="758" y="294" class="sub">Weaviate</text>
+  <text x="758" y="336" class="hand">一体化强，拼装少</text>
+  <path d="M758 366h142M758 388h98" class="soft"/>
+
+  <rect x="1020" y="222" width="240" height="176" rx="20" class="yellow" stroke="#231d18" stroke-width="5" transform="rotate(3 1140 310)"/>
+  <rect x="1052" y="206" width="92" height="28" rx="8" class="tape" transform="rotate(5 1098 220)"/>
+  <text x="1072" y="300" class="sub">Pinecone</text>
+  <text x="1072" y="342" class="hand">托管省心，少管集群</text>
+  <path d="M1072 372h132M1072 394h88" class="soft"/>
+
+  <rect x="788" y="484" width="298" height="206" rx="22" class="blue" stroke="#231d18" stroke-width="5" transform="rotate(2 937 587)"/>
+  <rect x="826" y="464" width="116" height="30" rx="8" class="tape" transform="rotate(4 884 479)"/>
+  <text x="836" y="570" class="sub">Milvus / Zilliz</text>
+  <text x="836" y="614" class="hand">数据更大，分布式更香</text>
+  <path d="M836 646h172M836 668h132" class="soft"/>
+
+  <g transform="translate(158 492)">
+    <rect x="0" y="0" width="332" height="206" rx="24" class="paper" stroke="#231d18" stroke-width="6"/>
+    <rect x="18" y="-18" width="102" height="28" rx="8" class="tape"/>
+    <text x="34" y="58" class="sub">FAISS</text>
+    <text x="34" y="100" class="hand">更像一套工具箱</text>
+    <path d="M36 132h222M36 154h196" class="soft"/>
+    <path d="M56 112v40M56 152h44M100 152v-22" class="stroke"/>
+    <rect x="208" y="88" width="84" height="54" rx="12" class="yellow" stroke="#231d18" stroke-width="5"/>
+    <path d="M224 112h52M224 128h44" class="soft"/>
+  </g>
+
+  <path d="M274 402c40 26 72 32 112 30" class="stroke"/>
+  <path d="M558 416c42 26 84 22 138-10" class="stroke"/>
+  <path d="M960 420c46 36 92 54 110 86" class="stroke"/>
+  <path d="M478 586c96-4 180-18 292-22" class="stroke"/>
+
+  <g transform="translate(492 502)">
+    <path d="M0 0h184c22 0 34 12 34 34v28c0 22-12 34-34 34H98l-28 30-4-30H0c-22 0-34-12-34-34V34C-34 12-22 0 0 0z" class="paper" stroke="#231d18" stroke-width="5"/>
+    <text x="90" y="54" text-anchor="middle" class="body">先分清你是要</text>
+    <text x="90" y="84" text-anchor="middle" class="body">原型、生产，还是省运维</text>
+  </g>
+</svg>
