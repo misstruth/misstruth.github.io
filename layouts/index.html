@@ -1,28 +1,201 @@
 {{ define "content" }}
-    {{ partial "home/profile.html" . }}
-
-    <!-- 添加最新文章列表 -->
-    <div class="home-blog-section">
-        <h2>最新文章</h2>
-        <div class="blog-list">
-            {{ $posts := where .Site.RegularPages "Section" "blog" }}
-            {{ $posts = $posts | first 5 }}
-            {{ range $posts }}
-            <article>
-                <div class="blog-card">
-                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                    {{ partial "blog/meta.html" . }}
-                    <div class="blog-summary">{{ .Summary }}</div>
-                </div>
-            </article>
-            {{ end }}
-        </div>
-
-        {{ $allPosts := where .Site.RegularPages "Section" "blog" }}
-        {{ if gt (len $allPosts) 5 }}
-        <div class="view-all-posts">
-            <a href="/blog/" class="view-all-link">查看所有文章 →</a>
-        </div>
+    {{ $posts := first 6 (sort (where .Site.RegularPages "Section" "blog") "Date" "desc") }}
+    {{ $latest := index $posts 0 }}
+    {{ $pickPosts := first 3 $posts }}
+    {{ $wallPosts := first 4 $posts }}
+    {{ $focusTags := first 5 .Site.Taxonomies.tags.ByCount }}
+    {{ $github := "" }}
+    {{ range .Site.Params.social }}
+        {{ if eq .name "GitHub" }}
+            {{ $github = .url }}
         {{ end }}
+    {{ end }}
+    {{ $statusList := slice "程序员" "记录者" "跑步中" "偶尔拍照" }}
+    {{ $promiseList := slice "先写给未来会忘记的自己" "也写给刚好路过并且需要的人" "把学过、做过、想明白的事情留档" }}
+    {{ $thoughtList := slice "把复杂问题拆开，写到几个月后自己也能看懂。" "把工作里踩过的坑和解法留档，别再重复交学费。" "给技术之外的日常留一点位置，不想把自己写成纯输出机器。" }}
+    {{ $stackList := slice "JavaScript / TypeScript" "React / Vue" "Node.js / Python / Go" "MySQL / PostgreSQL / MongoDB" "AWS / Docker / Kubernetes" }}
+    {{ $habitList := slice "读技术书，也读人怎么成长" "跑步和健身，让脑子保持清醒" "摄影和旅行，给日常留下证据" "偶尔打游戏，纯粹放松一下" }}
+    {{ $wallLabels := slice "最近在想" "刚踩过的坑" "还想再拆一层" "留给未来的自己" }}
+    {{ $wallClasses := slice "question-note--peach" "question-note--sky" "question-note--mint" "question-note--butter" }}
+
+    <div class="home-zine">
+        <section class="front-sheet" aria-labelledby="front-sheet-title">
+            <div class="front-sheet__main note-card note-card--paper">
+                <p class="scribble">给第一次来的你</p>
+                <h1 id="front-sheet-title">我会在这里把复杂问题拆开，也把普通日常认真留档</h1>
+                <p class="front-sheet__lead">{{ .Site.Params.info }}</p>
+
+                <div class="status-row">
+                    {{ range $statusList }}
+                    <span>{{ . }}</span>
+                    {{ end }}
+                </div>
+
+                <div class="promise-row">
+                    {{ range $promiseList }}
+                    <span>{{ . }}</span>
+                    {{ end }}
+                </div>
+
+                <p class="margin-note">如果你也喜欢把事情想明白，再慢慢写下来，这里应该会合拍。</p>
+            </div>
+
+            <aside class="front-sheet__side">
+                <article class="note-card note-card--sky note-card--tilt-left id-note">
+                    <div class="id-note__head">
+                        {{ with .Site.Params.avatarURL }}
+                        <img src="{{ . | relURL }}" alt="{{ $.Site.Params.author }}">
+                        {{ end }}
+                        <div>
+                            <p class="note-tag">PiDan 的使用说明</p>
+                            <h2>{{ .Site.Params.author }}</h2>
+                            <p>热爱技术，也愿意把学习和生活写得有呼吸感。</p>
+                        </div>
+                    </div>
+
+                    <div class="id-note__tags">
+                        {{ range $focusTags }}
+                        <span># {{ .Name }}</span>
+                        {{ end }}
+                    </div>
+                </article>
+
+                <article class="note-card note-card--butter note-card--tilt-right thesis-note">
+                    <p class="note-tag">我希望这个博客长成什么样</p>
+                    <p class="thesis-note__body">不把它写成履历，更想把它写成一个公开工作台。写我学过的、做过的、想明白的，也写那些暂时还没完全想明白、但值得先留下来的东西。</p>
+                </article>
+
+                <article class="note-card note-card--ink entry-note">
+                    <p class="note-tag">从哪里开始逛</p>
+                    <div class="entry-note__grid">
+                        <a href="{{ "/blog/" | relURL }}">所有文章</a>
+                        <a href="{{ "/about/" | relURL }}">关于我</a>
+                        <a href="{{ "/tags/" | relURL }}">主题标签</a>
+                        <a href="{{ "/archives/" | relURL }}">文章归档</a>
+                        {{ with $github }}
+                        <a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+                        {{ end }}
+                    </div>
+                </article>
+            </aside>
+        </section>
+
+        <section class="story-board" aria-labelledby="story-board-title">
+            <div class="story-board__heading">
+                <p class="scribble">不是履历，是人物侧写</p>
+                <h2 id="story-board-title">先别急着翻文章，我先把自己摊开一点</h2>
+            </div>
+
+            <div class="story-board__layout">
+                <article class="note-card note-card--paper story-note story-note--main">
+                    <p class="note-tag">我写博客时，脑子里反复出现的三件事</p>
+                    <ol class="thought-list">
+                        {{ range $thoughtList }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ol>
+                </article>
+
+                <div class="story-board__stack">
+                    <article class="note-card note-card--mint note-card--tilt-left story-note">
+                        <p class="note-tag">常出没区域</p>
+                        <h3>经常会写到的技术坐标</h3>
+                        <div class="stack-cloud">
+                            {{ range $stackList }}
+                            <span>{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </article>
+
+                    <article class="note-card note-card--peach note-card--tilt-right story-note">
+                        <p class="note-tag">离开键盘以后</p>
+                        <h3>我也认真过普通生活</h3>
+                        <ul class="habit-list">
+                            {{ range $habitList }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </article>
+
+                    <article class="note-card note-card--sky story-note">
+                        <p class="note-tag">最近在折腾</p>
+                        <h3>脑子里常驻的关键词</h3>
+                        <div class="focus-tags">
+                            {{ range $focusTags }}
+                            <span># {{ .Name }}</span>
+                            {{ end }}
+                        </div>
+                        <p class="mini-note">AI、Hugo、Web 开发和效率工具，最近出现得很勤。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="reading-desk" aria-labelledby="reading-desk-title">
+            <div class="reading-desk__heading">
+                <p class="scribble">如果你想更快认识我</p>
+                <h2 id="reading-desk-title">先从这些内容开始</h2>
+            </div>
+
+            <div class="reading-desk__grid">
+                <article class="note-card note-card--ink reading-feature">
+                    <p class="note-tag">如果你只看一篇</p>
+                    {{ with $latest }}
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Summary | plainify | truncate 150 }}</p>
+                    <div class="reading-feature__meta">
+                        <span>{{ .Date | time.Format "2006.01.02" }}</span>
+                        <a href="{{ .RelPermalink }}">阅读全文</a>
+                    </div>
+                    {{ end }}
+                </article>
+
+                <article class="note-card note-card--butter note-card--tilt-left reading-picks">
+                    <p class="note-tag">如果你想更快摸清风格</p>
+                    <ul class="pick-list">
+                        {{ range $pickPosts }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            <span>{{ .Date | time.Format "01.02" }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </article>
+
+                <aside class="note-card note-card--paper reading-qr">
+                    <img src="{{ "images/homepage-qr.svg" | relURL }}" alt="博客首页二维码">
+                    <p>主页也给愿意收藏的人留了一个入口。</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="question-wall" aria-labelledby="question-wall-title">
+            <div class="question-wall__heading">
+                <p class="scribble">最近写到这里</p>
+                <h2 id="question-wall-title">先把最近几篇文章贴在这里</h2>
+                <p>有的是技术笔记，有的是过程记录，也有一些还在慢慢想明白的东西。</p>
+            </div>
+
+            <div class="question-wall__grid">
+                {{ range $idx, $post := $wallPosts }}
+                <article class="question-note {{ index $wallClasses (mod $idx (len $wallClasses)) }}">
+                    <div class="question-note__tape"></div>
+                    <p class="question-note__label">{{ index $wallLabels (mod $idx (len $wallLabels)) }}</p>
+                    <div class="question-note__meta">
+                        <span>{{ $post.Date | time.Format "2006.01.02" }}</span>
+                        <span>{{ i18n "reading_time" $post.ReadingTime }}</span>
+                    </div>
+                    <h3><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h3>
+                    <p>{{ $post.Summary | plainify | truncate 120 }}</p>
+                    <div class="question-note__footer">
+                        <a href="{{ $post.RelPermalink }}">阅读全文</a>
+                        {{ with index $post.Params.tags 0 }}
+                        <span># {{ . }}</span>
+                        {{ end }}
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+        </section>
     </div>
 {{ end }}
