@@ -22,7 +22,7 @@ image = "/images/blog/rag-agent-comic-cover-banner.svg"
 最近整理了一批本地资料，里面既有检索、向量库、混合搜索，也有工具调用、上下文注入、自动化和多代理协作。抽出来以后，我越来越觉得：**RAG 和 Agent 最重要的不是谁更高级，而是它们解决的问题完全不同。**
 
 {{< figure
-    src="/images/blog/rag-agent-comic-difference.svg"
+    src="/images/blog/rag-agent-comic-guide/01-rag-agent-roles-local.png"
     alt="漫画风插图：左边的角色在资料堆里拿着放大镜找证据，代表 RAG；右边的角色拿着工具和任务清单准备行动，代表 Agent。"
     caption="图 1：把它们想成两种不同角色会更好理解。RAG 更像先把资料和证据找对的人，Agent 更像拿着上下文和工具把事情做下去的人。"
     class="article-comic article-comic--left"
@@ -100,7 +100,7 @@ Agent 则完全是另一类能力。
 这个边界非常重要。很多系统失败，不是因为没做检索，而是把检索、记忆、历史对话和系统规则全部混进一个大 prompt，最后谁也管不好。
 
 {{< figure
-    src="/images/blog/rag-agent-comic-handoff.svg"
+    src="/images/blog/rag-agent-comic-guide/02-retrieve-then-act-local.png"
     alt="漫画三格插图：用户先提问题，检索系统从 runbook、日志和文档中拉回当前上下文，然后 Agent 根据这些上下文查日志、搜代码和发消息。"
     caption="图 2：更常见的真实流程不是二选一，而是先检索、再交接。RAG 先把当前任务需要的证据备好，Agent 再基于这些证据决定下一步。"
     class="article-comic article-comic--right"
@@ -150,7 +150,7 @@ Agent 则完全是另一类能力。
 三者分工越清楚，系统越容易维护。
 
 {{< figure
-    src="/images/blog/rag-agent-comic-boundaries.svg"
+    src="/images/blog/rag-agent-comic-guide/03-context-boundaries-local.png"
     alt="漫画风便签插图：三张便签分别代表会话历史、长期记忆和 RAG 外部资料，每张卡片都写着各自负责的内容。"
     caption="图 3：这三个容器最怕混着装。会话历史记录刚刚发生了什么，记忆保留长期稳定的信息，RAG 则临时拉取这一题真正需要查阅的外部材料。"
     class="article-comic article-comic--left"
@@ -187,7 +187,7 @@ Agent 则完全是另一类能力。
 比如“收到告警后先查 runbook，再看日志，再输出处理建议”，就是很典型的“RAG + Agent”。
 
 {{< figure
-    src="/images/blog/rag-agent-comic-decision-tree.svg"
+    src="/images/blog/rag-agent-comic-guide/04-rag-agent-decision-local.png"
     alt="漫画风插图：一个三岔路口的决策图，问题主要是问答时偏向 RAG，主要是做事时偏向 Agent，同时需要查资料和行动时走 RAG 加 Agent。"
     caption="图 4：判断该先上 RAG 还是先上 Agent，最实用的起点不是看名词，而是先看这个需求的核心，到底是在回答问题，还是在把事情做完。"
     class="article-comic article-comic--left"
@@ -209,9 +209,9 @@ Agent 则完全是另一类能力。
 再补一个很重要的边界：`FAISS` 很强，但它更像一个高性能向量检索库，不是一套完整的生产数据库；而 `Qdrant`、`Weaviate`、`Milvus`、`Pinecone`、`Chroma` 这些，才更接近大家平时说的 RAG 数据库。
 
 {{< figure
-    src="/images/blog/rag-agent-comic-database-map.svg"
-    alt="漫画风插图：一面贴满便签的 RAG 数据库选型墙，分别指向原型、生产、自托管、托管和大规模路线，旁边单独放着一个 FAISS 工具箱。"
-    caption="图 5：数据库选型更像在看自己现在最缺什么。有人缺的是原型速度，有人缺的是生产能力，也有人缺的是运维自由。FAISS 则更像一套检索工具箱，不太像完整数据库。"
+    src="/images/blog/rag-agent-comic-guide/05-rag-production-checklist-local.png"
+    alt="漫画风四格插图：从数据库问题引出 RAG 生产检查清单，包括语料清理、结构分块、metadata、hybrid 检索和 rerank。"
+    caption="图 5：数据库不是唯一重点。真正决定 RAG 质量的，往往是语料清理、结构分块、metadata、hybrid 检索、rerank 和后续评估这一整条链路。"
     class="article-comic article-comic--right"
 >}}
 
